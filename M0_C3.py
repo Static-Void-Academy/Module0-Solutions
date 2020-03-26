@@ -1,14 +1,19 @@
-# M0.C3 - Max Volume
+# PizzPazz
+# Print numbers 1 - 100
+# BUT:
+#   - If number divisible by 3, print Pizz instead.
+#   - If number divisible by 5, print Pazz instead.
+#   - If number divisible by 3 & 5, print PizzPazz.
+# See https://github.com/Static-Void-Academy/Module0-Challenges/blob/master/M0_C3.md
 
-def get_loudest_second(volumes):
-    max_volume = -73
-    max_second = -1
-    for x in range(0, len(volumes)):
-        if volumes[x] < -72 or volumes[x] > 10:
-            return "Invalid"
-
-        if volumes[x] > max_volume:
-            max_volume = volumes[x]
-            max_second = x
-
-    return max_second
+# Iterate through nums 1-100
+for x in range(1, 101):
+	# Only executes one of the following branches
+	if x % 3 == 0 and x % 5 == 0:
+		print("PizzPazz")
+	elif x % 3 == 0: # Divisible by 3
+		print("Pizz")
+	elif x % 5 == 0: # Divisible by 5
+		print("Pazz")
+	else:
+		print(x)

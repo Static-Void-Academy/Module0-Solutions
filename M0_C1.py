@@ -1,6 +1,6 @@
 # Script will start by asking for name, greeting user, and then
 # listing off locations. Output and next steps depend on user's
-# input. See https://github.com/Static-Void-Academy/Module0-Challenges/blob/master/M0.C1.md
+# input. See https://github.com/Static-Void-Academy/Module0-Challenges/blob/master/M0_C1.md
 
 print('Hello! What is your name?')
 name = input()
