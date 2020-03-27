@@ -3,12 +3,11 @@
 # occurrences and print those out.
 # See https://github.com/Static-Void-Academy/Module0-Challenges/blob/master/M0_C2.md
 
-print('Input message:')
-body = input()
+message = input('Input message: ')
 
 H = 0
 h = 0
-for char in body:
+for char in message:
     if char == 'H':
         H += 1
     elif char == 'h':
