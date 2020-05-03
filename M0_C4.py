@@ -1,5 +1,5 @@
 # M0_C4 - Max Volume
-# See https://github.com/Static-Void-Academy/Module0-Challenges/blob/master/M0_C4.md
+# See https://github.com/Static-Void-Academy/M0_C4/blob/master/README.md
 
 def get_loudest_second(volumes):
     # We have separate variables tracking current maximum volume so far and its index.
