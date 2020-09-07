@@ -1,23 +1,31 @@
-# M0_C4 - Max Volume
+# M0_C4 - Peak Volumes
 # See https://github.com/Static-Void-Academy/M0_C4/blob/master/README.md
 
-def get_loudest_second(volumes):
-    # We have separate variables tracking current maximum volume so far and its index.
-    # -73 and -1 starting values because they fall outside expected range.
-    max_volume = -73
-    max_second = -1
+def get_peak_volumes(volumes):
+    """Returns a list of the current peak volume at each second.
+    Resets when volume below -72 or above 10."""
 
-    # Iterate through volumes list
-    for x in range(0, len(volumes)):
-        # If volume below -72 or above 10, per prompt, invalid.
-        # Can immediately exit function and return "Invalid"
-        if volumes[x] < -72 or volumes[x] > 10:
-            return "Invalid"
+    peaks = []
+    peak = -73
+    for volume in volumes:
+        temp = peak
+        if volume < -72:
+            peak = -73 # Reset peak
+            temp = '-Inf'
+        elif volume > 10:
+            peak = -73 # Reset peak
+            temp = 'CLIP'
+        elif volume > peak:
+            peak = volume
+            temp = volume
 
-        # Otherwise, check if current volume > max_volume
-        # and set new maximum and new index if yes.
-        if volumes[x] > max_volume:
-            max_volume = volumes[x]
-            max_second = x
+        peaks.append(temp)
 
-    return max_second
+    return peaks
+
+#### DO NOT TOUCH CODE BELOW THIS LINE ####
+if __name__ == '__main__':
+    """This code is for manual testing and is provided for your convenience."""
+    test_volumes = input("Input space-separated list of volumes: ")
+    converted = [int(a) for a in test_volumes.split()]
+    print(get_peak_volumes(converted))
