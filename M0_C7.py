@@ -1,4 +1,5 @@
 # M0_C7 - Employee Database
+# See https://github.com/Static-Void-Academy/M0_C7/blob/master/README.md
 ########################################
 # Modify and debug the code as needed. #
 ########################################
